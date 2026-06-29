@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+Disallow: /api/*
+Sitemap: https://dreamspartn-etgf7r9k.manus.space/sitemap.xml
