@@ -2,15 +2,755 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=https://dreamsppg-partnerships.manus.space/">
-<title>The DREAMS Partner Program</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The DREAMS Partner Program 2026 | Strategic Alliance Ecosystem</title>
+<meta name="description" content="The DREAMS Partner Program — a strategic alliance ecosystem for professionals who advise, serve, sell to, or influence business owners. Uncover hidden money, create new revenue streams, and deepen client loyalty.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Jost:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
-  body{background:#010810;color:#00C9B8;font-family:sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;text-align:center}
-  a{color:#00C9B8}
+:root {
+  --navy: #010810;
+  --navy2: #050f1e;
+  --navy3: #071428;
+  --gold: #F5C518;
+  --gold2: #c4a55a;
+  --gold3: #e8c96a;
+  --teal: #00C9B8;
+  --teal2: #00a896;
+  --purple: #7B2FBE;
+  --blue: #1a6fc4;
+  --text: #e8f4f0;
+  --muted: #8ba8b5;
+  --border: rgba(0,201,184,.18);
+  --gold-border: rgba(245,197,24,.2);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--text);font-family:'Jost',sans-serif;line-height:1.6;overflow-x:hidden}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(1,8,16,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,201,184,.12)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:.7rem 2rem;display:flex;align-items:center;gap:2rem}
+.nav-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;flex-shrink:0}
+.nav-logo-icon{width:38px;height:38px}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:#fff;letter-spacing:.04em}
+.nav-brand span{color:var(--gold)}
+.nav-links{display:flex;gap:1.6rem;list-style:none;margin-left:auto}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--teal)}
+.nav-cta{background:var(--gold);color:#000;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.5rem 1.1rem;border-radius:4px;text-decoration:none;white-space:nowrap;transition:background .2s}
+.nav-cta:hover{background:var(--gold3)}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--teal);font-size:1.4rem}
+.mobile-menu{display:none;position:fixed;top:58px;left:0;right:0;background:rgba(1,8,16,.97);border-bottom:1px solid var(--border);padding:1.2rem 2rem;z-index:99}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;color:var(--muted);text-decoration:none;padding:.6rem 0;font-size:.9rem;border-bottom:1px solid rgba(255,255,255,.05)}
+.mobile-menu a:hover{color:var(--teal)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;padding:7rem 2rem 4rem;display:flex;align-items:center;background:radial-gradient(ellipse 80% 60% at 70% 50%, rgba(0,80,160,.18) 0%, transparent 70%), radial-gradient(ellipse 50% 80% at 20% 50%, rgba(0,201,184,.06) 0%, transparent 60%), var(--navy)}
+.hero-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.hero-left{position:relative}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,201,184,.1);border:1px solid var(--teal);border-radius:20px;padding:.35rem .9rem;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:1.4rem}
+.hero-badge::before{content:'';width:6px;height:6px;background:var(--teal);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5vw,4.2rem);font-weight:700;line-height:1.08;margin-bottom:.6rem;color:#fff}
+.hero-title .gold{color:var(--gold);font-style:italic}
+.hero-sub{font-family:'Bebas Neue',sans-serif;font-size:clamp(1rem,2vw,1.4rem);letter-spacing:.18em;color:var(--gold2);margin-bottom:1.2rem}
+.hero-desc{font-size:.95rem;color:var(--muted);line-height:1.75;max-width:500px;margin-bottom:2rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.btn-gold{background:linear-gradient(135deg,var(--gold),#e8a800);color:#000;font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.75rem 1.6rem;border-radius:5px;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 20px rgba(245,197,24,.3)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(245,197,24,.45)}
+.btn-outline{background:transparent;color:#fff;font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.73rem 1.6rem;border-radius:5px;text-decoration:none;border:1px solid rgba(255,255,255,.3);display:inline-flex;align-items:center;gap:.5rem;transition:border-color .2s,color .2s}
+.btn-outline:hover{border-color:var(--teal);color:var(--teal)}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.stat-box{text-align:center;padding:.8rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:8px}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--teal);line-height:1}
+.stat-label{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:.2rem}
+
+/* ── ORBITAL DIAGRAM ── */
+.hero-right{position:relative;display:flex;justify-content:center;align-items:center}
+.orbital-wrap{position:relative;width:min(480px,90vw);height:min(480px,90vw)}
+.orbital-svg{width:100%;height:100%}
+/* Side stat cards */
+.side-cards{position:absolute;left:-130px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:.6rem}
+.side-card{background:rgba(5,15,30,.85);border:1px solid rgba(0,201,184,.2);border-radius:8px;padding:.6rem .8rem;width:115px;text-align:center}
+.side-card-icon{font-size:1.2rem;margin-bottom:.2rem}
+.side-card-label{font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.side-card-val{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--gold);line-height:1}
+.score-card{position:absolute;right:-140px;top:50%;transform:translateY(-50%);background:rgba(5,15,30,.9);border:1px solid var(--gold-border);border-radius:10px;padding:1rem;width:130px}
+.score-title{font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem}
+.score-dot{display:inline-block;width:6px;height:6px;background:#00ff88;border-radius:50%;margin-left:.3rem;animation:pulse 2s infinite}
+
+/* ── SECTION COMMONS ── */
+section{padding:5rem 2rem}
+.boxed{max-width:1280px;margin:0 auto}
+.sec-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:.7rem}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:.8rem}
+.sec-title .gold{color:var(--gold)}
+.sec-desc{color:var(--muted);font-size:.95rem;line-height:1.75;max-width:620px}
+.divider{width:60px;height:3px;background:linear-gradient(90deg,var(--teal),transparent);border-radius:2px;margin:1rem 0 2rem}
+
+/* ── DREAMS SCORE ── */
+.dreams-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;margin-top:2rem}
+.dreams-card{background:linear-gradient(135deg,rgba(5,15,30,.9),rgba(7,20,40,.9));border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1.4rem;position:relative;overflow:hidden;transition:transform .2s,border-color .2s}
+.dreams-card:hover{transform:translateY(-3px);border-color:var(--teal)}
+.dreams-card::before{content:attr(data-letter);position:absolute;top:-10px;right:10px;font-family:'Bebas Neue',sans-serif;font-size:5rem;color:rgba(0,201,184,.06);line-height:1}
+.dc-letter{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:.8rem}
+.dc-title{font-size:1rem;font-weight:700;color:#fff;margin-bottom:.4rem}
+.dc-desc{font-size:.82rem;color:var(--muted);line-height:1.6}
+
+/* ── HIDDEN MONEY ── */
+.money-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.9rem;margin-top:1.5rem}
+.money-item{background:rgba(0,201,184,.05);border:1px solid rgba(0,201,184,.15);border-radius:8px;padding:.9rem 1rem;display:flex;align-items:center;gap:.7rem}
+.money-icon{font-size:1.3rem;flex-shrink:0}
+.money-text{font-size:.85rem;color:var(--text)}
+
+/* ── PARTNER TYPES ── */
+.partner-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.2rem;margin-top:2rem}
+.partner-card{background:rgba(5,15,30,.7);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1.4rem;transition:border-color .2s}
+.partner-card:hover{border-color:var(--gold-border)}
+.pc-num{font-family:'Bebas Neue',sans-serif;font-size:.8rem;letter-spacing:.1em;color:var(--gold2);margin-bottom:.4rem}
+.pc-title{font-size:1rem;font-weight:700;color:#fff;margin-bottom:.3rem}
+.pc-sub{font-size:.78rem;color:var(--teal);margin-bottom:.7rem}
+.pc-list{list-style:none;display:flex;flex-direction:column;gap:.25rem}
+.pc-list li{font-size:.8rem;color:var(--muted);padding-left:.9rem;position:relative}
+.pc-list li::before{content:'›';position:absolute;left:0;color:var(--gold2)}
+
+/* ── WHY PARTNERS ── */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.2rem;margin-top:2rem}
+.why-card{background:rgba(5,15,30,.6);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1.4rem;text-align:center;transition:transform .2s,border-color .2s}
+.why-card:hover{transform:translateY(-3px);border-color:var(--teal)}
+.why-icon{font-size:2rem;margin-bottom:.8rem}
+.why-title{font-size:.95rem;font-weight:700;color:#fff;margin-bottom:.5rem}
+.why-desc{font-size:.82rem;color:var(--muted);line-height:1.65}
+
+/* ── QUOTE BAND ── */
+.quote-band{background:linear-gradient(135deg,rgba(245,197,24,.08),rgba(0,201,184,.04));border-top:1px solid var(--gold-border);border-bottom:1px solid var(--gold-border);padding:3rem 2rem;text-align:center}
+.quote-text{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.5vw,2rem);font-style:italic;color:var(--gold3);max-width:700px;margin:0 auto .8rem;line-height:1.5}
+.quote-attr{font-size:.78rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+
+/* ── HOW IT WORKS ── */
+.steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.2rem;margin-top:2rem;position:relative}
+.step{background:rgba(5,15,30,.7);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1.4rem;text-align:center;position:relative}
+.step-num{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--teal2));display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:#000;margin:0 auto .9rem}
+.step-title{font-size:.92rem;font-weight:700;color:#fff;margin-bottom:.5rem}
+.step-desc{font-size:.8rem;color:var(--muted);line-height:1.6}
+
+/* ── SCRIPTS ── */
+.scripts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.2rem;margin-top:2rem}
+.script-card{background:rgba(5,15,30,.7);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1.4rem}
+.sc-num{font-family:'Bebas Neue',sans-serif;font-size:.78rem;letter-spacing:.1em;color:var(--teal);margin-bottom:.5rem}
+.sc-title{font-size:.95rem;font-weight:700;color:#fff;margin-bottom:.8rem}
+.sc-quote{font-size:.82rem;color:var(--muted);font-style:italic;line-height:1.7;border-left:3px solid var(--gold);padding-left:.8rem;margin-bottom:.5rem}
+.power-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.6rem;margin-top:1.5rem}
+.power-item{background:rgba(0,201,184,.06);border:1px solid rgba(0,201,184,.15);border-radius:6px;padding:.6rem .9rem;font-size:.82rem;color:var(--teal)}
+
+/* ── PDF CTA ── */
+.pdf-cta{background:linear-gradient(135deg,rgba(7,20,40,.95),rgba(5,15,30,.95));border:1px solid var(--gold-border);border-radius:16px;padding:3rem;text-align:center;margin-top:3rem}
+.pdf-cta h3{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:#fff;margin-bottom:.5rem}
+.pdf-cta p{color:var(--muted);font-size:.9rem;margin-bottom:1.5rem}
+
+/* ── FOOTER ── */
+footer{background:rgba(1,5,12,.98);border-top:1px solid rgba(0,201,184,.1);padding:3rem 2rem 1.5rem}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:2rem;margin-bottom:2rem}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:.5rem}
+.footer-brand span{color:var(--gold)}
+.footer-tagline{font-size:.8rem;color:var(--muted);font-style:italic}
+.footer-col h4{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:.8rem}
+.footer-col a{display:block;font-size:.82rem;color:var(--muted);text-decoration:none;margin-bottom:.35rem;transition:color .2s}
+.footer-col a:hover{color:var(--teal)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+.footer-copy{font-size:.75rem;color:var(--muted)}
+
+/* ── SCROLL TOP ── */
+#scrollTop{position:fixed;bottom:1.5rem;right:1.5rem;width:42px;height:42px;background:var(--teal);border-radius:50%;display:none;align-items:center;justify-content:center;cursor:pointer;z-index:200;border:none;color:#000;font-size:1.1rem;box-shadow:0 4px 15px rgba(0,201,184,.4);transition:transform .2s}
+#scrollTop:hover{transform:scale(1.1)}
+#scrollTop.show{display:flex}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-right{display:none}
+  .side-cards,.score-card{display:none}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+}
+@media(max-width:600px){
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .nav-toggle{display:block}
+}
 </style>
 </head>
 <body>
-  <p>Redirecting to <a href="https://dreamsppg-partnerships.manus.space/">The DREAMS Partner Program</a>&hellip;</p>
-  <script>window.location.replace("https://dreamsppg-partnerships.manus.space/");</script>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 38 38" fill="none">
+        <rect width="38" height="38" rx="6" fill="rgba(0,201,184,.12)"/>
+        <path d="M10 28 L14 10 L19 22 L24 10 L28 28" stroke="#00C9B8" stroke-width="2.5" stroke-linejoin="round" fill="none"/>
+        <path d="M8 32 Q19 26 30 32" stroke="#F5C518" stroke-width="2" fill="none"/>
+      </svg>
+      <span class="nav-brand">DREAMS <span>PARTNER</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#program">The Program</a></li>
+      <li><a href="#analyzer">The Analyzer</a></li>
+      <li><a href="#partners">Partner Types</a></li>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#scripts">Scripts</a></li>
+    </ul>
+    <a href="https://dreamsfaststart.com/dbr-partner-program-guide.pdf" target="_blank" class="nav-cta">&#8681; Download PDF Guide</a>
+    <button class="nav-toggle" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">&#9776;</button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="#program">The Program</a>
+  <a href="#analyzer">The Analyzer</a>
+  <a href="#partners">Partner Types</a>
+  <a href="#how">How It Works</a>
+  <a href="#scripts">Scripts</a>
+  <a href="https://dreamsfaststart.com/dbr-partner-program-guide.pdf" target="_blank">&#8681; Download PDF Guide</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="program">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">&#128737; Strategic Alliance Ecosystem</div>
+      <h1 class="hero-title">The <span class="gold">DREAMS</span><br>Partner Program</h1>
+      <div class="hero-sub">Work Smarter. Not Just Harder.</div>
+      <p class="hero-desc">A premium, high-end ecosystem built for professionals who advise, serve, sell to, or influence business owners. Create new revenue streams, deepen client loyalty, and uncover hidden money for every business you touch.</p>
+      <div class="hero-btns">
+        <a href="https://dreamsfaststart.com/dbr-partner-program-guide.pdf" target="_blank" class="btn-gold">&#8681; Download Color PDF Guide</a>
+        <a href="#analyzer" class="btn-outline">Explore Program ›</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-box"><div class="stat-num">70–90%</div><div class="stat-label">Warm Referral Conversions</div></div>
+        <div class="stat-box"><div class="stat-num">10+</div><div class="stat-label">Alliance Categories</div></div>
+        <div class="stat-box"><div class="stat-num">6</div><div class="stat-label">DREAMS Score Dimensions</div></div>
+        <div class="stat-box"><div class="stat-num">5</div><div class="stat-label">Proven Partner Scripts</div></div>
+      </div>
+    </div>
+
+    <!-- ORBITAL DIAGRAM -->
+    <div class="hero-right">
+      <div class="side-cards">
+        <div class="side-card"><div class="side-card-icon">&#128101;</div><div class="side-card-label">Partner Network</div><div class="side-card-val">10+</div><div class="side-card-label">Alliance Categories</div></div>
+        <div class="side-card"><div class="side-card-icon">&#128279;</div><div class="side-card-label">Alliance</div><div class="side-card-val">6</div><div class="side-card-label">DREAMS Dimensions</div></div>
+        <div class="side-card"><div class="side-card-icon">&#128196;</div><div class="side-card-label">Analyzer Ready</div><div class="side-card-val">5</div><div class="side-card-label">Partner Scripts</div></div>
+      </div>
+
+      <div class="orbital-wrap">
+        <svg class="orbital-svg" viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#00C9B8" stop-opacity=".35"/>
+              <stop offset="100%" stop-color="#00C9B8" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#1a6fc4" stop-opacity=".25"/>
+              <stop offset="100%" stop-color="#1a6fc4" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="blur1"><feGaussianBlur stdDeviation="8"/></filter>
+            <filter id="blur2"><feGaussianBlur stdDeviation="3"/></filter>
+          </defs>
+
+          <!-- Glow background -->
+          <circle cx="240" cy="240" r="200" fill="url(#glow2)" filter="url(#blur1)"/>
+          <circle cx="240" cy="240" r="120" fill="url(#glow1)" filter="url(#blur1)"/>
+
+          <!-- Outer orbit ring -->
+          <circle cx="240" cy="240" r="195" stroke="rgba(0,201,184,.12)" stroke-width="1" stroke-dasharray="4 6"/>
+          <!-- Mid orbit ring -->
+          <circle cx="240" cy="240" r="145" stroke="rgba(26,111,196,.2)" stroke-width="1" stroke-dasharray="3 5"/>
+          <!-- Inner ring -->
+          <circle cx="240" cy="240" r="85" stroke="rgba(245,197,24,.2)" stroke-width="1.5"/>
+
+          <!-- Center hub -->
+          <circle cx="240" cy="240" r="58" fill="rgba(1,8,16,.95)" stroke="rgba(0,201,184,.4)" stroke-width="2"/>
+          <circle cx="240" cy="240" r="48" fill="rgba(5,15,30,.9)" stroke="rgba(26,111,196,.3)" stroke-width="1"/>
+          <text x="240" y="232" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="16" fill="#F5C518" letter-spacing="2">DREAMS</text>
+          <text x="240" y="248" text-anchor="middle" font-family="Jost,sans-serif" font-size="7.5" fill="#8ba8b5" letter-spacing="1.5">BUSINESS</text>
+          <text x="240" y="260" text-anchor="middle" font-family="Jost,sans-serif" font-size="7.5" fill="#8ba8b5" letter-spacing="1.5">OPTIMIZATION</text>
+
+          <!-- Spoke lines to outer nodes -->
+          <line x1="240" y1="182" x2="240" y2="50" stroke="rgba(0,201,184,.2)" stroke-width="1"/>
+          <line x1="240" y1="298" x2="240" y2="430" stroke="rgba(0,201,184,.2)" stroke-width="1"/>
+          <line x1="182" y1="240" x2="50" y2="240" stroke="rgba(0,201,184,.2)" stroke-width="1"/>
+          <line x1="298" y1="240" x2="430" y2="240" stroke="rgba(0,201,184,.2)" stroke-width="1"/>
+          <line x1="199" y1="199" x2="98" y2="98" stroke="rgba(26,111,196,.2)" stroke-width="1"/>
+          <line x1="281" y1="199" x2="382" y2="98" stroke="rgba(26,111,196,.2)" stroke-width="1"/>
+          <line x1="199" y1="281" x2="98" y2="382" stroke="rgba(26,111,196,.2)" stroke-width="1"/>
+          <line x1="281" y1="281" x2="382" y2="382" stroke="rgba(26,111,196,.2)" stroke-width="1"/>
+
+          <!-- Outer nodes (8 partner types) -->
+          <!-- Top: CPAs -->
+          <circle cx="240" cy="50" r="28" fill="rgba(5,15,30,.95)" stroke="rgba(0,201,184,.5)" stroke-width="1.5"/>
+          <text x="240" y="46" text-anchor="middle" font-family="Jost,sans-serif" font-size="7" fill="#00C9B8" font-weight="600">CPAs &amp;</text>
+          <text x="240" y="57" text-anchor="middle" font-family="Jost,sans-serif" font-size="7" fill="#00C9B8" font-weight="600">ACCOUNTING</text>
+
+          <!-- Top-right: Insurance -->
+          <circle cx="382" cy="98" r="28" fill="rgba(5,15,30,.95)" stroke="rgba(0,201,184,.4)" stroke-width="1.5"/>
+          <text x="382" y="94" text-anchor="middle" font-family="Jost,sans-serif" font-size="7" fill="#00C9B8" font-weight="600">INSURANCE</text>
+          <text x="382" y="105" text-anchor="middle" font-family="Jost,sans-serif" font-size="7" fill="#00C9B8" font-weight="600">&amp; BENEFITS</text>
+
+          <!-- Right: Consultants -->
+          <circle cx="430" cy="240" r="28" fill="rgba(5,15,30,.95)" stroke="rgba(26,111,196,.5)" stroke-width="1.5"/>
+          <text x="430" y="236" text-anchor="middle" font-family="Jost,sans-serif" font-size="7" fill="#5ba4e8" font-weight="600">CONSUL-</text>
+          <text x="430" y="247" text-anchor="middle" font-family="Jost,sans-serif" font-size="7" fill="#5ba4e8" font-weight="600">TANTS</text>
+
+          <!-- Bottom-right: Real Estate -->
+          <circle cx="382" cy="382" r="28" fill="rgba(5,15,30,.95)" stroke="rgba(26,111,196,.4)" stroke-width="1.5"/>
+          <text x="382" y="378" text-anchor="middle" font-family="Jost,sans-serif" font-size="7" fill="#5ba4e8" font-weight="600">REAL</text>
+          <text x="382" y="389" text-anchor="middle" font-family="Jost,sans-serif" font-size="7" fill="#5ba4e8" font-weight="600">ESTATE</text>
+
+          <!-- Bottom: HR & Recruiting -->
+          <circle cx="240" cy="430" r="28" fill="rgba(5,15,30,.95)" stroke="rgba(245,197,24,.4)" stroke-width="1.5"/>
+          <text x="240" y="426" text-anchor="middle" font-family="Jost,sans-serif" font-size="7" fill="#F5C518" font-weight="600">HR &amp;</text>
+          <text x="240" y="437" text-anchor="middle" font-family="Jost,sans-serif" font-size="7" fill="#F5C518" font-weight="600">RECRUITING</text>
+
+          <!-- Bottom-left: Marketing -->
+          <circle cx="98" cy="382" r="28" fill="rgba(5,15,30,.95)" stroke="rgba(245,197,24,.4)" stroke-width="1.5"/>
+          <text x="98" y="378" text-anchor="middle" font-family="Jost,sans-serif" font-size="7" fill="#F5C518" font-weight="600">MARKETING</text>
+          <text x="98" y="389" text-anchor="middle" font-family="Jost,sans-serif" font-size="7" fill="#F5C518" font-weight="600">&amp; TECH</text>
+
+          <!-- Left: Payroll -->
+          <circle cx="50" cy="240" r="28" fill="rgba(5,15,30,.95)" stroke="rgba(0,201,184,.4)" stroke-width="1.5"/>
+          <text x="50" y="236" text-anchor="middle" font-family="Jost,sans-serif" font-size="7" fill="#00C9B8" font-weight="600">PAYROLL</text>
+          <text x="50" y="247" text-anchor="middle" font-family="Jost,sans-serif" font-size="7" fill="#00C9B8" font-weight="600">&amp; PEO</text>
+
+          <!-- Top-left: Industry Influencers -->
+          <circle cx="98" cy="98" r="28" fill="rgba(5,15,30,.95)" stroke="rgba(0,201,184,.4)" stroke-width="1.5"/>
+          <text x="98" y="94" text-anchor="middle" font-family="Jost,sans-serif" font-size="7" fill="#00C9B8" font-weight="600">INDUSTRY</text>
+          <text x="98" y="105" text-anchor="middle" font-family="Jost,sans-serif" font-size="7" fill="#00C9B8" font-weight="600">INFLUENCERS</text>
+
+          <!-- Floating dots on orbit rings -->
+          <circle cx="240" cy="95" r="3" fill="#00C9B8" opacity=".7"/>
+          <circle cx="335" cy="145" r="3" fill="#1a6fc4" opacity=".7"/>
+          <circle cx="335" cy="335" r="3" fill="#F5C518" opacity=".7"/>
+          <circle cx="145" cy="335" r="3" fill="#F5C518" opacity=".7"/>
+          <circle cx="145" cy="145" r="3" fill="#00C9B8" opacity=".7"/>
+
+          <!-- Inner orbit nodes (DREAMS letters) -->
+          <circle cx="240" cy="155" r="14" fill="rgba(0,201,184,.15)" stroke="rgba(0,201,184,.4)" stroke-width="1"/>
+          <text x="240" y="160" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="12" fill="#00C9B8">D</text>
+
+          <circle cx="315" cy="195" r="14" fill="rgba(26,111,196,.15)" stroke="rgba(26,111,196,.4)" stroke-width="1"/>
+          <text x="315" y="200" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="12" fill="#5ba4e8">R</text>
+
+          <circle cx="315" cy="285" r="14" fill="rgba(245,197,24,.12)" stroke="rgba(245,197,24,.35)" stroke-width="1"/>
+          <text x="315" y="290" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="12" fill="#F5C518">E</text>
+
+          <circle cx="240" cy="325" r="14" fill="rgba(245,197,24,.12)" stroke="rgba(245,197,24,.35)" stroke-width="1"/>
+          <text x="240" y="330" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="12" fill="#F5C518">A</text>
+
+          <circle cx="165" cy="285" r="14" fill="rgba(0,201,184,.15)" stroke="rgba(0,201,184,.4)" stroke-width="1"/>
+          <text x="165" y="290" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="12" fill="#00C9B8">M</text>
+
+          <circle cx="165" cy="195" r="14" fill="rgba(26,111,196,.15)" stroke="rgba(26,111,196,.4)" stroke-width="1"/>
+          <text x="165" y="200" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="12" fill="#5ba4e8">S</text>
+        </svg>
+      </div>
+
+      <div class="score-card">
+        <div class="score-title">DREAMS SCORE ANALYZER <span class="score-dot"></span></div>
+        <svg viewBox="0 0 110 90" width="110" style="display:block;margin:0 auto">
+          <polygon points="55,10 95,35 80,75 30,75 15,35" fill="none" stroke="rgba(245,197,24,.2)" stroke-width="1"/>
+          <polygon points="55,22 82,40 72,65 38,65 28,40" fill="rgba(0,201,184,.08)" stroke="rgba(0,201,184,.4)" stroke-width="1.5"/>
+          <text x="55" y="87" text-anchor="middle" font-family="Jost,sans-serif" font-size="7" fill="#8ba8b5">DIAGNOSTIC INTELLIGENCE</text>
+          <text x="55" y="8" text-anchor="middle" font-family="Jost,sans-serif" font-size="6" fill="#8ba8b5">PROFITABILITY</text>
+          <text x="100" y="38" text-anchor="start" font-family="Jost,sans-serif" font-size="6" fill="#8ba8b5">CASH</text>
+          <text x="0" y="38" text-anchor="start" font-family="Jost,sans-serif" font-size="6" fill="#8ba8b5">RISK</text>
+          <text x="55" y="80" text-anchor="middle" font-family="Jost,sans-serif" font-size="6" fill="#8ba8b5">GROWTH</text>
+        </svg>
+        <div style="font-size:.62rem;color:var(--muted);text-align:center;margin-top:.3rem">Reveal opportunities.<br>Drive real impact.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DREAMS SCORE ANALYZER -->
+<section id="analyzer" style="background:var(--navy2)">
+  <div class="boxed">
+    <div class="sec-eyebrow">The Foundation</div>
+    <h2 class="sec-title">What Is the <span class="gold">DREAMS Score Analyzer™?</span></h2>
+    <div class="divider"></div>
+    <p class="sec-desc">A comprehensive business review that uncovers hidden money, inefficiencies, and opportunities most business owners never knew existed — giving partners a powerful, value-first conversation starter that makes them the hero to every client.</p>
+
+    <div class="dreams-grid">
+      <div class="dreams-card" data-letter="D">
+        <div class="dc-letter" style="background:rgba(0,201,184,.15);color:var(--teal)">D</div>
+        <div class="dc-title">Debt</div>
+        <div class="dc-desc">Refinancing, interest reduction &amp; cash flow improvement. Identify where businesses are overpaying on debt service.</div>
+      </div>
+      <div class="dreams-card" data-letter="R">
+        <div class="dc-letter" style="background:rgba(26,111,196,.15);color:#5ba4e8">R</div>
+        <div class="dc-title">Retirement</div>
+        <div class="dc-desc">Plan optimization &amp; fiduciary efficiency. Uncover underperforming retirement plans and compliance gaps.</div>
+      </div>
+      <div class="dreams-card" data-letter="E">
+        <div class="dc-letter" style="background:rgba(245,197,24,.12);color:var(--gold)">E</div>
+        <div class="dc-title">Expenses</div>
+        <div class="dc-desc">Payroll, benefits, insurance &amp; vendor overpayments. The average business overpays by 15–30% in this category alone.</div>
+      </div>
+      <div class="dreams-card" data-letter="A">
+        <div class="dc-letter" style="background:rgba(245,197,24,.12);color:var(--gold)">A</div>
+        <div class="dc-title">Assets</div>
+        <div class="dc-desc">Tax credits, incentives, depreciation &amp; energy savings. Most businesses leave $50K–$600K in unclaimed credits on the table.</div>
+      </div>
+      <div class="dreams-card" data-letter="M">
+        <div class="dc-letter" style="background:rgba(0,201,184,.15);color:var(--teal)">M</div>
+        <div class="dc-title">Money</div>
+        <div class="dc-desc">Liquidity, tax strategy &amp; cash acceleration. Identify hidden cash flow opportunities and tax reduction strategies.</div>
+      </div>
+      <div class="dreams-card" data-letter="S">
+        <div class="dc-letter" style="background:rgba(123,47,190,.15);color:#a855f7">S</div>
+        <div class="dc-title">Security</div>
+        <div class="dc-desc">Legal, risk, insurance &amp; compliance gaps. Protect what's been built and close the vulnerabilities most owners don't know exist.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:2.5rem">
+      <div class="sec-eyebrow">Hidden Money Hiding in Plain Sight</div>
+      <p style="color:var(--muted);font-size:.9rem;margin-bottom:1rem">Every business owner we meet is leaving money on the table. The DREAMS Score Analyzer™ finds it — fast.</p>
+      <div class="money-grid">
+        <div class="money-item"><span class="money-icon">💰</span><span class="money-text">Tax Credits (Federal &amp; State incentives)</span></div>
+        <div class="money-item"><span class="money-icon">📋</span><span class="money-text">Payroll Savings &amp; Compliance</span></div>
+        <div class="money-item"><span class="money-icon">🏥</span><span class="money-text">Benefits Audits &amp; Overpayments</span></div>
+        <div class="money-item"><span class="money-icon">⚡</span><span class="money-text">Energy Savings &amp; Operational Audits</span></div>
+        <div class="money-item"><span class="money-icon">🤖</span><span class="money-text">AI Optimization &amp; Automation Savings</span></div>
+        <div class="money-item"><span class="money-icon">📊</span><span class="money-text">R&amp;D Tax Credits &amp; FICA Tip Credits</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER TYPES -->
+<section id="partners">
+  <div class="boxed">
+    <div class="sec-eyebrow">Ideal Partners</div>
+    <h2 class="sec-title">Who This Program Is <span class="gold">For</span></h2>
+    <div class="divider"></div>
+    <p class="sec-desc">If you already have relationships with business owners, you're already halfway there. Every category below represents professionals who already have trust with business owners. One relationship can unlock dozens of clients.</p>
+
+    <div class="partner-grid">
+      <div class="partner-card">
+        <div class="pc-num">01</div>
+        <div class="pc-title">Financial, Tax &amp; Compliance Gatekeepers</div>
+        <div class="pc-sub">They see everything — payroll, margins, tax pain, compliance gaps.</div>
+        <ul class="pc-list">
+          <li>CPAs &amp; Accounting Firms</li>
+          <li>Tax Preparers / EA Firms</li>
+          <li>Payroll Companies &amp; Reps</li>
+          <li>Fractional CFOs / Controllers</li>
+          <li>ERC / ERTC Consultants</li>
+          <li>R&amp;D Tax Credit Firms</li>
+          <li>Business Loan Brokers</li>
+        </ul>
+      </div>
+      <div class="partner-card">
+        <div class="pc-num">02</div>
+        <div class="pc-title">Insurance, Benefits &amp; Risk Advisors</div>
+        <div class="pc-sub">Already talking to owners about cost, protection, and compliance.</div>
+        <ul class="pc-list">
+          <li>Health Insurance Agents</li>
+          <li>P&amp;C Insurance Agents</li>
+          <li>Benefits Brokers</li>
+          <li>Workers' Comp Brokers</li>
+          <li>Cyber Liability Advisors</li>
+          <li>Life Insurance Agents</li>
+          <li>Business Continuation Specialists</li>
+        </ul>
+      </div>
+      <div class="partner-card">
+        <div class="pc-num">03</div>
+        <div class="pc-title">Business Advisors, Consultants &amp; Coaches</div>
+        <div class="pc-sub">Trusted voices who influence decisions before vendors are chosen.</div>
+        <ul class="pc-list">
+          <li>Business &amp; Management Consultants</li>
+          <li>Exit Planning Advisors</li>
+          <li>Business Coaches</li>
+          <li>EOS / Scaling Up Implementers</li>
+          <li>AI Consultants</li>
+          <li>Energy Efficiency Consultants</li>
+          <li>Solar Consultants (Commercial)</li>
+        </ul>
+      </div>
+      <div class="partner-card">
+        <div class="pc-num">04</div>
+        <div class="pc-title">Real Estate, Facilities &amp; Asset-Based Pros</div>
+        <div class="pc-sub">They know when companies are growing, moving, or expanding.</div>
+        <ul class="pc-list">
+          <li>Commercial Real Estate Brokers</li>
+          <li>Mortgage Brokers</li>
+          <li>Equipment Leasing Brokers</li>
+          <li>Facility Management Companies</li>
+          <li>Property Managers</li>
+          <li>Security System Providers</li>
+        </ul>
+      </div>
+      <div class="partner-card">
+        <div class="pc-num">05</div>
+        <div class="pc-title">HR, Recruiting &amp; Workforce Channels</div>
+        <div class="pc-sub">They live inside payroll, headcount, and compliance conversations.</div>
+        <ul class="pc-list">
+          <li>HR Consultants</li>
+          <li>Recruiting &amp; Staffing Firms</li>
+          <li>Temp Agencies</li>
+          <li>Employee Wellness Consultants</li>
+          <li>Training &amp; Development Firms</li>
+          <li>OSHA / Safety Consultants</li>
+        </ul>
+      </div>
+      <div class="partner-card">
+        <div class="pc-num">06</div>
+        <div class="pc-title">Marketing, Media &amp; Visibility Pros</div>
+        <div class="pc-sub">Growth = higher payroll, higher taxes, more inefficiency to fix.</div>
+        <ul class="pc-list">
+          <li>Marketing &amp; Digital Agencies</li>
+          <li>SEO Agencies</li>
+          <li>CRM Consultants</li>
+          <li>AI Marketing Automation Firms</li>
+          <li>Podcast Hosts &amp; Influencers</li>
+          <li>PR Firms &amp; Business Branding</li>
+        </ul>
+      </div>
+      <div class="partner-card">
+        <div class="pc-num">07</div>
+        <div class="pc-title">Industry-Specific Business Influencers</div>
+        <div class="pc-sub">They sell into the same verticals repeatedly — high-trust niches.</div>
+        <ul class="pc-list">
+          <li>Auto Dealers</li>
+          <li>Trucking &amp; Logistics Firms</li>
+          <li>Construction Companies</li>
+          <li>Contractors (HVAC, Plumbing, Electrical)</li>
+          <li>Restaurants &amp; Hospitality</li>
+          <li>Manufacturing Reps</li>
+        </ul>
+      </div>
+      <div class="partner-card">
+        <div class="pc-num">08</div>
+        <div class="pc-title">Associations, Networks &amp; Aggregators</div>
+        <div class="pc-sub">One relationship = dozens or hundreds of businesses.</div>
+        <ul class="pc-list">
+          <li>Chambers of Commerce</li>
+          <li>Trade &amp; Business Associations</li>
+          <li>Franchise Groups</li>
+          <li>BNI / Referral Groups</li>
+          <li>Mastermind Groups</li>
+          <li>Trade Shows &amp; Business Expos</li>
+        </ul>
+      </div>
+      <div class="partner-card">
+        <div class="pc-num">09–10</div>
+        <div class="pc-title">Legal, Structural &amp; Logistics Advisors</div>
+        <div class="pc-sub">Involved during big decisions &amp; high-exposure operations.</div>
+        <ul class="pc-list">
+          <li>Business &amp; Corporate Attorneys</li>
+          <li>Employment Law Attorneys</li>
+          <li>M&amp;A Advisors &amp; Exit Planners</li>
+          <li>Delivery &amp; Courier Companies</li>
+          <li>Fleet Managers</li>
+          <li>Logistics Consultants</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY PARTNERS LOVE IT -->
+<section style="background:var(--navy2)">
+  <div class="boxed">
+    <div class="sec-eyebrow">The Value Proposition</div>
+    <h2 class="sec-title">Why Partners <span class="gold">Love It</span></h2>
+    <div class="divider"></div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🎯</div>
+        <div class="why-title">No Selling Required</div>
+        <div class="why-desc">Simply make an introduction. We handle the analysis, presentation, and close. You never have to explain tax code or compliance.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🏆</div>
+        <div class="why-title">You Look Like the Hero</div>
+        <div class="why-desc">Your clients get real, tangible value — and you get the credit for bringing it to them. Deepens trust and loyalty instantly.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💵</div>
+        <div class="why-title">New Recurring Revenue</div>
+        <div class="why-desc">Earn referral fees, revenue sharing, and recurring overrides — without adding workload. Build a flywheel, not a treadmill.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">⚖️</div>
+        <div class="why-title">CPA &amp; Attorney-Friendly</div>
+        <div class="why-desc">Designed to complement — never compete with — your existing professional relationships. Chess, not checkers.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📈</div>
+        <div class="why-title">Scales Without Effort</div>
+        <div class="why-desc">One introduction can unlock ongoing revenue. The flywheel compounds over time — your network does the heavy lifting.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🔬</div>
+        <div class="why-title">Data-Driven Credibility</div>
+        <div class="why-desc">The DREAMS Score Analyzer™ backs every conversation with real numbers. You walk in with a tool, not a pitch.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE BAND -->
+<div class="quote-band">
+  <div class="quote-text">"Chess, not checkers — and you're already on the board."</div>
+  <div class="quote-attr">DREAMS Partner Program &nbsp;·&nbsp; 2026 Strategic Alliance Guide</div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="boxed">
+    <div class="sec-eyebrow">The Process</div>
+    <h2 class="sec-title">How It <span class="gold">Works</span></h2>
+    <div class="divider"></div>
+    <p class="sec-desc">Five simple steps. Zero complexity on your end. Maximum value for your clients.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-title">Identify a Business Owner</div>
+        <div class="step-desc">Someone in your existing network who could benefit from a complimentary financial review.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-title">Introduce the Analyzer™</div>
+        <div class="step-desc">A simple, no-pressure introduction to the DREAMS Score Analyzer™. We give you the script.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-title">We Analyze the Business</div>
+        <div class="step-desc">Our team conducts a comprehensive review across all six DREAMS dimensions. You do nothing.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-title">We Present the Findings</div>
+        <div class="step-desc">A clear, compelling presentation of savings and opportunities uncovered — you get the credit.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">05</div>
+        <div class="step-title">Everyone Wins</div>
+        <div class="step-desc">Your client saves money. You earn revenue. We grow together. Repeat with the next introduction.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCRIPTS -->
+<section id="scripts" style="background:var(--navy2)">
+  <div class="boxed">
+    <div class="sec-eyebrow">Conversation Framework</div>
+    <h2 class="sec-title">Strategic Partner <span class="gold">Scripts</span></h2>
+    <div class="divider"></div>
+    <p class="sec-desc">Calibrated questions, no-pressure positioning, and curiosity-first framing — designed to open doors without ever feeling like a pitch.</p>
+
+    <div class="scripts-grid">
+      <div class="script-card">
+        <div class="sc-num">01 — INITIAL PARTNER CONVERSATION</div>
+        <div class="sc-title">Opening the Door</div>
+        <div class="sc-quote">"Would you be opposed to a simple way to add more value to your business-owner clients — without adding more work or learning a new product?"</div>
+        <div class="sc-quote">"We help business owners uncover hidden money — tax credits, payroll savings, benefit overpayments, energy inefficiencies, and AI optimization. How are your clients currently identifying those kinds of blind spots?"</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-num">02 — EXPLORING FIT</div>
+        <div class="sc-title">Deepening the Conversation</div>
+        <div class="sc-quote">"How do you currently help your clients reduce expenses or increase profitability — beyond your core service?"</div>
+        <div class="sc-quote">"What happens if a client is unknowingly overpaying and no one brings it to their attention?"</div>
+        <div class="sc-quote">"Would it be unreasonable to explore a value-first review that doesn't disrupt your existing relationships?"</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-num">03 — THE SOFT INTRO ASK</div>
+        <div class="sc-title">Making the Ask</div>
+        <div class="sc-quote">"Would you be opposed to making an introduction if we could deliver insights that make you look like the hero — without you having to explain tax code or compliance?"</div>
+        <div class="sc-quote">"If this worked exactly as described, how would that impact your client retention?"</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-num">04 — HANDLING HESITATION</div>
+        <div class="sc-title">Lowering Resistance</div>
+        <div class="sc-quote">"It sounds like protecting your client relationships is important."</div>
+        <div class="sc-quote">"What would need to be true for this to feel like a win for you?"</div>
+        <div class="sc-quote">"How does this compare to other referral partnerships you've seen?"</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-num">05 — NEXT STEP CLOSE</div>
+        <div class="sc-title">Non-Threatening Close</div>
+        <div class="sc-quote">"Would it make sense to test this with one client first?"</div>
+        <div class="sc-quote">"What's the downside of seeing a sample Dreams Score analysis before deciding?"</div>
+      </div>
+    </div>
+
+    <div style="margin-top:2.5rem">
+      <div class="sec-eyebrow">Power Language</div>
+      <p style="color:var(--muted);font-size:.85rem;margin-bottom:1rem">Calibrated phrases that lower resistance and spark curiosity:</p>
+      <div class="power-grid">
+        <div class="power-item">• "Help me understand..."</div>
+        <div class="power-item">• "How are you currently handling...?"</div>
+        <div class="power-item">• "What happens if nothing changes?"</div>
+        <div class="power-item">• "Would it be ridiculous to...?"</div>
+        <div class="power-item">• "What would need to be true...?"</div>
+        <div class="power-item">• "Would you be opposed to...?"</div>
+      </div>
+    </div>
+
+    <div class="pdf-cta">
+      <h3>Official Program Guide PDF</h3>
+      <p>Download the beautiful full-color guide — scripts, frameworks, partner types, and the complete DREAMS Score overview. Print-ready and share-ready.</p>
+      <a href="https://dreamsfaststart.com/dbr-partner-program-guide.pdf" target="_blank" class="btn-gold" style="display:inline-flex">&#8681; Download Color PDF Guide</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">DREAMS <span>PARTNER</span> PROGRAM</div>
+        <div class="footer-tagline">"Work Smarter. Not Just Harder."</div>
+        <p style="font-size:.8rem;color:var(--muted);margin-top:.8rem;max-width:320px">A strategic alliance ecosystem for professionals who advise, serve, sell to, or influence business owners.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Program Links</h4>
+        <a href="#program">The Program</a>
+        <a href="#analyzer">The Analyzer</a>
+        <a href="#partners">Partner Types</a>
+        <a href="#how">How It Works</a>
+        <a href="#scripts">Scripts</a>
+      </div>
+      <div class="footer-col">
+        <h4>DBR Ecosystem</h4>
+        <a href="https://dreamsfaststart.com" target="_blank">DBR Fast Start</a>
+        <a href="https://dreamsscores.com/?refid=AA0233" target="_blank">DREAMS Score</a>
+        <a href="https://renewalsforlife.com" target="_blank">Renewals for Life</a>
+        <a href="https://showmethemoney.pro" target="_blank">Show Me The Money</a>
+        <a href="https://dreamsfaststart.com/portfolio.html" target="_blank">Full Portfolio</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 Dreams Business Resources &nbsp;·&nbsp; Strategic Partners Pro &nbsp;·&nbsp; All Rights Reserved</div>
+      <div class="footer-copy">DBR Digital Ecosystem</div>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8679;</button>
+
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('scrollTop').classList.toggle('show',window.scrollY>400);
+});
+</script>
 </body>
 </html>
