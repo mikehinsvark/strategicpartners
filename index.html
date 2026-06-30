@@ -28,6 +28,9 @@
 html{scroll-behavior:smooth}
 body{background:var(--navy);color:var(--text);font-family:'Jost',sans-serif;line-height:1.6;overflow-x:hidden}
 
+/* ── BOXED WRAPPER ── */
+.page-box{max-width:1320px;margin:0 auto;border-left:1px solid rgba(0,201,184,.15);border-right:1px solid rgba(0,201,184,.15);min-height:100vh;position:relative}
+
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(1,8,16,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,201,184,.12)}
 .nav-inner{max-width:1280px;margin:0 auto;padding:.7rem 2rem;display:flex;align-items:center;gap:2rem}
@@ -47,7 +50,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(1,8,16,.92);
 .mobile-menu a:hover{color:var(--teal)}
 
 /* ── HERO ── */
-.hero{min-height:100vh;padding:7rem 2rem 4rem;display:flex;align-items:center;background:radial-gradient(ellipse 80% 60% at 70% 50%, rgba(0,80,160,.18) 0%, transparent 70%), radial-gradient(ellipse 50% 80% at 20% 50%, rgba(0,201,184,.06) 0%, transparent 60%), var(--navy)}
+.hero{min-height:calc(100vh - 58px);padding:2rem 2rem 2.5rem;display:flex;align-items:center;background:radial-gradient(ellipse 80% 60% at 70% 50%, rgba(0,80,160,.18) 0%, transparent 70%), radial-gradient(ellipse 50% 80% at 20% 50%, rgba(0,201,184,.06) 0%, transparent 60%), var(--navy)}
 .hero-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
 .hero-left{position:relative}
 .hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,201,184,.1);border:1px solid var(--teal);border-radius:20px;padding:.35rem .9rem;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:1.4rem}
@@ -81,8 +84,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(1,8,16,.92);
 .score-title{font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem}
 .score-dot{display:inline-block;width:6px;height:6px;background:#00ff88;border-radius:50%;margin-left:.3rem;animation:pulse 2s infinite}
 
+/* ── SECTION NAV ── */
+.section-nav{position:fixed;right:1.5rem;top:50%;transform:translateY(-50%);z-index:150;display:flex;flex-direction:column;align-items:center;gap:.5rem}
+.snav-btn{width:36px;height:36px;border-radius:50%;background:rgba(1,8,16,.8);border:1px solid rgba(0,201,184,.4);color:var(--teal);font-size:.9rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,border-color .2s;line-height:1}
+.snav-btn:hover{background:rgba(0,201,184,.15);border-color:var(--teal)}
+.snav-dots{display:flex;flex-direction:column;gap:.35rem;padding:.3rem 0}
+.snav-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:background .2s,transform .2s}
+.snav-dot.active{background:var(--teal);transform:scale(1.3)}
+@media(max-width:768px){.section-nav{display:none}}
+
 /* ── SECTION COMMONS ── */
-section{padding:5rem 2rem}
+section{padding:4rem 2rem}
 .boxed{max-width:1280px;margin:0 auto}
 .sec-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:.7rem}
 .sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:.8rem}
@@ -164,7 +176,7 @@ footer{background:rgba(1,5,12,.98);border-top:1px solid rgba(0,201,184,.1);paddi
 .footer-copy{font-size:.75rem;color:var(--muted)}
 
 /* ── SCROLL TOP ── */
-#scrollTop{position:fixed;bottom:1.5rem;right:1.5rem;width:42px;height:42px;background:var(--teal);border-radius:50%;display:none;align-items:center;justify-content:center;cursor:pointer;z-index:200;border:none;color:#000;font-size:1.1rem;box-shadow:0 4px 15px rgba(0,201,184,.4);transition:transform .2s}
+#scrollTop{position:fixed;bottom:1.5rem;left:1.5rem;width:42px;height:42px;background:var(--teal);border-radius:50%;display:none;align-items:center;justify-content:center;cursor:pointer;z-index:200;border:none;color:#000;font-size:1.1rem;box-shadow:0 4px 15px rgba(0,201,184,.4);transition:transform .2s}
 #scrollTop:hover{transform:scale(1.1)}
 #scrollTop.show{display:flex}
 
@@ -187,6 +199,7 @@ footer{background:rgba(1,5,12,.98);border-top:1px solid rgba(0,201,184,.1);paddi
 </head>
 <body>
 
+<div class="page-box">
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
@@ -216,6 +229,13 @@ footer{background:rgba(1,5,12,.98);border-top:1px solid rgba(0,201,184,.1);paddi
   <a href="#how">How It Works</a>
   <a href="#scripts">Scripts</a>
   <a href="https://dreamsfaststart.com/dbr-partner-program-guide.pdf" target="_blank">&#8681; Download PDF Guide</a>
+</div>
+
+<!-- SECTION NAV -->
+<div class="section-nav" id="sectionNav">
+  <button class="snav-btn" id="snavUp" title="Previous section">&#8679;</button>
+  <div class="snav-dots" id="snavDots"></div>
+  <button class="snav-btn" id="snavDown" title="Next section">&#8681;</button>
 </div>
 
 <!-- HERO -->
@@ -748,9 +768,59 @@ footer{background:rgba(1,5,12,.98);border-top:1px solid rgba(0,201,184,.1);paddi
 <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8679;</button>
 
 <script>
+// Scroll top button
 window.addEventListener('scroll',()=>{
   document.getElementById('scrollTop').classList.toggle('show',window.scrollY>400);
+  updateDots();
 });
+
+// Section navigation
+const sections = Array.from(document.querySelectorAll('section[id], footer'));
+const dotsContainer = document.getElementById('snavDots');
+
+// Build dots
+sections.forEach((sec,i)=>{
+  const dot = document.createElement('div');
+  dot.className = 'snav-dot';
+  dot.title = sec.id || 'footer';
+  dot.addEventListener('click',()=>{
+    sec.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  dotsContainer.appendChild(dot);
+});
+
+function updateDots(){
+  const scrollY = window.scrollY + window.innerHeight/2;
+  let activeIdx = 0;
+  sections.forEach((sec,i)=>{
+    if(sec.offsetTop <= scrollY) activeIdx = i;
+  });
+  document.querySelectorAll('.snav-dot').forEach((d,i)=>{
+    d.classList.toggle('active', i===activeIdx);
+  });
+}
+
+document.getElementById('snavUp').addEventListener('click',()=>{
+  const scrollY = window.scrollY + window.innerHeight/2;
+  let target = sections[0];
+  for(let i=sections.length-1;i>=0;i--){
+    if(sections[i].offsetTop < window.scrollY - 50){
+      target = sections[i]; break;
+    }
+  }
+  target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+
+document.getElementById('snavDown').addEventListener('click',()=>{
+  for(let i=0;i<sections.length;i++){
+    if(sections[i].offsetTop > window.scrollY + 50){
+      sections[i].scrollIntoView({behavior:'smooth',block:'start'}); return;
+    }
+  }
+});
+
+updateDots();
 </script>
+</div><!-- end page-box -->
 </body>
 </html>
