@@ -50,29 +50,29 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(1,8,16,.92);
 .mobile-menu a:hover{color:var(--teal)}
 
 /* ── HERO ── */
-.hero{min-height:calc(100vh - 58px);padding:2rem 2rem 2.5rem;display:flex;align-items:center;background:radial-gradient(ellipse 80% 60% at 70% 50%, rgba(0,80,160,.18) 0%, transparent 70%), radial-gradient(ellipse 50% 80% at 20% 50%, rgba(0,201,184,.06) 0%, transparent 60%), var(--navy)}
-.hero-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.hero{height:calc(100vh - 58px);min-height:600px;padding:0 2rem;display:flex;align-items:center;overflow:hidden;background:radial-gradient(ellipse 80% 60% at 70% 50%, rgba(0,80,160,.18) 0%, transparent 70%), radial-gradient(ellipse 50% 80% at 20% 50%, rgba(0,201,184,.06) 0%, transparent 60%), var(--navy)}
+.hero-inner{max-width:1280px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
 .hero-left{position:relative}
 .hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,201,184,.1);border:1px solid var(--teal);border-radius:20px;padding:.35rem .9rem;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:1.4rem}
 .hero-badge::before{content:'';width:6px;height:6px;background:var(--teal);border-radius:50%;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
-.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5vw,4.2rem);font-weight:700;line-height:1.08;margin-bottom:.6rem;color:#fff}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.6rem);font-weight:700;line-height:1.08;margin-bottom:.5rem;color:#fff}
 .hero-title .gold{color:var(--gold);font-style:italic}
 .hero-sub{font-family:'Bebas Neue',sans-serif;font-size:clamp(1rem,2vw,1.4rem);letter-spacing:.18em;color:var(--gold2);margin-bottom:1.2rem}
-.hero-desc{font-size:.95rem;color:var(--muted);line-height:1.75;max-width:500px;margin-bottom:2rem}
-.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.hero-desc{font-size:.9rem;color:var(--muted);line-height:1.7;max-width:500px;margin-bottom:1.4rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.6rem}
 .btn-gold{background:linear-gradient(135deg,var(--gold),#e8a800);color:#000;font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.75rem 1.6rem;border-radius:5px;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 20px rgba(245,197,24,.3)}
 .btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(245,197,24,.45)}
 .btn-outline{background:transparent;color:#fff;font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.73rem 1.6rem;border-radius:5px;text-decoration:none;border:1px solid rgba(255,255,255,.3);display:inline-flex;align-items:center;gap:.5rem;transition:border-color .2s,color .2s}
 .btn-outline:hover{border-color:var(--teal);color:var(--teal)}
-.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-.stat-box{text-align:center;padding:.8rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:8px}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem}
+.stat-box{text-align:center;padding:.6rem .5rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:8px}
 .stat-num{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--teal);line-height:1}
 .stat-label{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:.2rem}
 
 /* ── ORBITAL DIAGRAM ── */
 .hero-right{position:relative;display:flex;justify-content:center;align-items:center}
-.orbital-wrap{position:relative;width:min(480px,90vw);height:min(480px,90vw)}
+.orbital-wrap{position:relative;width:min(420px,44vw);height:min(420px,44vw)}
 .orbital-svg{width:100%;height:100%}
 /* Side stat cards */
 .side-cards{position:absolute;left:-130px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:.6rem}
