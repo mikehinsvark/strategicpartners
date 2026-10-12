@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">DREAMS Strategic Partners</title>
+  <desc id="desc">A teal strategic alliance bridge with a gold upward partnership arc on a navy tile.</desc>
+  <rect x="3" y="3" width="58" height="58" rx="15" fill="#071428" stroke="#00C9B8" stroke-opacity=".65" stroke-width="2"/>
+  <path d="M14 44 20 18 32 36 44 18 50 44" fill="none" stroke="#00C9B8" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <path d="M12 48C22 43 34 43 52 48" fill="none" stroke="#F5C518" stroke-linecap="round" stroke-width="4"/>
+  <circle cx="20" cy="18" r="2.5" fill="#F5C518"/>
+  <circle cx="44" cy="18" r="2.5" fill="#F5C518"/>
+</svg>
